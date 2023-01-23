@@ -3,8 +3,8 @@ services:
   database:
     container_name: database
     image: mysql
-    environment:
-      - VAR1=${MYSQL_ROOT_PASSWORD}
+    env_file:
+      - .env
     ports:
       - "3306:3306"
 
